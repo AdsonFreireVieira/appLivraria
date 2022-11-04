@@ -32,7 +32,9 @@ public class servletLogin extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String login = request.getParameter("login");
-		String senha = request.getParameter("senha");
+		String senha = request.getParameter("password");
+		
+		
 		
           Cliente cliente = new Cliente();
 		
@@ -57,7 +59,16 @@ public class servletLogin extends HttpServlet {
 	}catch(Exception e) {
 	  e.printStackTrace();
 	   }
-	}
+	
 
+	String cadastrar = request.getParameter("cadastrar");
+	
+	if(cadastrar.equalsIgnoreCase("cadastrar")){
 		
+		RequestDispatcher redirecionar = request.getRequestDispatcher("/Principal/CadastrarLogin.jsp");
+		redirecionar.forward(request, response);
+		return;
+	}
+	
+	}
 }
