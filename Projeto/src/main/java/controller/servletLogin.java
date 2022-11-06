@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.Cliente;
 
-@WebServlet("/login")
+@WebServlet(urlPatterns = {"/login", "/loginCadastro"})
 public class servletLogin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -24,8 +24,15 @@ public class servletLogin extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		String acao = request.getParameter("acao");
+
+		if(acao.equalsIgnoreCase("cadastrar")) {
+			 
+			RequestDispatcher redirecionar = request.getRequestDispatcher("/Principal/CadastroLogin.jsp");
+			redirecionar.forward(request, response);
+			
+		}
 	}
 
 	
@@ -33,6 +40,8 @@ public class servletLogin extends HttpServlet {
 		
 		String login = request.getParameter("login");
 		String senha = request.getParameter("password");
+		
+		
 		
 		
 		
@@ -52,23 +61,15 @@ public class servletLogin extends HttpServlet {
 	}
 	
 	RequestDispatcher redirecionar = request.getRequestDispatcher("/index.jsp");
-	request.setAttribute("msg", " Login Invalido");
+    request.setAttribute("msg", "Login Invalido");
 	redirecionar.forward(request, response);
 	
-		
 	}catch(Exception e) {
 	  e.printStackTrace();
-	   }
-	
-
-	String cadastrar = request.getParameter("cadastrar");
-	
-	if(cadastrar.equalsIgnoreCase("cadastrar")){
-		
-		RequestDispatcher redirecionar = request.getRequestDispatcher("/Principal/CadastrarLogin.jsp");
-		redirecionar.forward(request, response);
-		return;
+	   
 	}
+		
+		
 	
 	}
 }
