@@ -1,4 +1,4 @@
-package controller;
+ package controller;
 
 import java.io.IOException;
 
@@ -40,11 +40,7 @@ public class servletLogin extends HttpServlet {
 		
 		String login = request.getParameter("login");
 		String senha = request.getParameter("password");
-		
-		
-		
-		
-		
+	
           Cliente cliente = new Cliente();
 		
 		cliente.setLogin(login);

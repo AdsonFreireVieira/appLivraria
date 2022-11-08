@@ -8,7 +8,6 @@ public class singleConnection {
 	private static String url = "jdbc:mysql://localhost:3306/db_applivraria?autoReconnect=true";
 	private static String user = "root";
 	private static String senha = "admin";
-	private static String driver = "com.mysql.jdbc.Driver";
 	private static Connection connection;
 
 	
@@ -26,7 +25,7 @@ public class singleConnection {
 		try {
 			if (connection == null) {
 				
-				Class.forName(driver);
+				Class.forName("com.mysql.cj.jdbc.Driver");
 				connection = DriverManager.getConnection(url,user,senha);
 				connection.setAutoCommit(false);
 

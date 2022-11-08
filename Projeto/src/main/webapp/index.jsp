@@ -31,8 +31,8 @@
                             </div>
                             <div class="form-group">
                                 
-                                <input type="submit" name="submit" class="btn btn-info btn-md" value="Enviar">
-                                 <a href="loginCadastro?acao=cadastrar">Cadastrar </a>
+                                <input type="submit" name="submit" class="btn btn-primary" value="Enviar">
+                                 <a href="loginCadastro?acao=cadastrar" class="btn btn-primary">Cadastrar </a>
                             </div>
                              ${msg}
                         </form>
