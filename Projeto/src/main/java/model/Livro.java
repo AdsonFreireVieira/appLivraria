@@ -9,6 +9,7 @@ public class Livro {
 	private String genero;
 	private String status;
     private String foto_livro;
+   
     
     
 	public Integer getId_livro() {

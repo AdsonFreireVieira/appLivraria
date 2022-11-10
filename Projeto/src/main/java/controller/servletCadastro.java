@@ -12,7 +12,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import model.Cliente;
 
-@WebServlet(urlPatterns = {"/cadastro","/limparCadastro"})
+@WebServlet(urlPatterns = {"/cadastro","/limparCadastro","/paginas"})
 public class servletCadastro extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
@@ -28,11 +28,20 @@ public class servletCadastro extends HttpServlet {
 		
 		String acao= request.getParameter("acao");
 		
+		String page = request.getParameter("acao");
+		
 		if(acao.equalsIgnoreCase("limpar")) {
 			
 			RequestDispatcher red = request.getRequestDispatcher("/Principal/CadastroLogin.jsp");
 			red.forward(request, response);
 			
+		}
+		
+		if(page.equalsIgnoreCase("paginAcao")) {
+			
+			RequestDispatcher redirecionar = request.getRequestDispatcher("/Principal/pages/pageAcao.jsp");
+			request.setAttribute("txt","PAgina chegou");
+			redirecionar.forward(request, response);
 		}
 	}
 
