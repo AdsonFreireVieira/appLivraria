@@ -37,7 +37,7 @@ public class servletCadastro extends HttpServlet {
 			
 		}
 		
-		if(page.equalsIgnoreCase("paginAcao")) {
+		else if(page.equalsIgnoreCase("paginAcao")) {
 			
 			RequestDispatcher redirecionar = request.getRequestDispatcher("/Principal/pages/pageAcao.jsp");
 			request.setAttribute("txt","PAgina chegou");
