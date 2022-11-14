@@ -1,0 +1,46 @@
+@charset "ISO-8859-1";
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	
+}
+
+@keyframes fadein{
+	0%{
+	transform:scale(.7) translateY(-10);
+	opacity:0;
+	}
+}
+body{
+	background-color:#060606; 
+	padding: 25px 9%;
+	text-align: center;
+	color:#fff;
+}
+.gallery_container{
+	display:grid;
+	grid-template-columns: repeat(3,1fr);
+	gap:20px;
+	text-align: center;
+}
+.galerry_container .image{
+	width: 350px;
+	border-radius: 5px;
+	border:2px solid #000;
+	cursor: point;
+	box-shadow:  0 5px 10px rgba(0,0,0,1);
+	background-color: #fff;
+	padding: 15px; 
+}
+.galerry_container .image img{
+	 
+	 width: 100%;
+	 height:250px;
+	 object-fit:cover;
+	 border-radius: 5px;
+	 margin-bottom: 10px;
+	
+	
+}
