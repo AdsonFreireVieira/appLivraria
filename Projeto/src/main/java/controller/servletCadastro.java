@@ -26,22 +26,63 @@ public class servletCadastro extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		RequestDispatcher red;
+		
 		String acao= request.getParameter("acao");
 		
-		String page = request.getParameter("acao");
-		
+		 
 		if(acao.equalsIgnoreCase("limpar")) {
 			
-			RequestDispatcher red = request.getRequestDispatcher("/Principal/CadastroLogin.jsp");
+			 red = request.getRequestDispatcher("/Principal/CadastroLogin.jsp");
 			red.forward(request, response);
 			
 		}
 		
-		else if(page.equalsIgnoreCase("paginAcao")) {
+		else if(acao.equalsIgnoreCase("paginAcao")) {
 			
-			RequestDispatcher redirecionar = request.getRequestDispatcher("/Principal/pages/pageAcao.jsp");
+			red = request.getRequestDispatcher("/Principal/pages/pageAcao.jsp");
 			request.setAttribute("txt","PAgina chegou");
-			redirecionar.forward(request, response);
+			red.forward(request, response);
+		}
+		else if (acao.equalsIgnoreCase("paginBiografia")) {
+			
+			red= request.getRequestDispatcher("/Principal/pages/pageBiografia.jsp");
+			red.forward(request, response);
+			
+		}
+		else if(acao.equalsIgnoreCase("paginCientifico")) {
+			
+			 red = request.getRequestDispatcher("/Principal/pages/pageCientifico.jsp");
+			 red.forward(request, response);
+			
+		}
+		else if (acao.equalsIgnoreCase("paginCronicas")) {
+			
+			red= request.getRequestDispatcher("/Principal/pages/pageCronica.jsp");
+			red.forward(request, response);
+			
+		}else if (acao.equalsIgnoreCase("Fabulas")) {
+			red = request.getRequestDispatcher("/Principal/pages/pageFabulas.jsp");
+			red.forward(request, response);
+		}
+		else if (acao.equalsIgnoreCase("Gastronomia")) {
+			
+			red = request.getRequestDispatcher("/Principal/pages/pageGastronomia.jsp");
+			red.forward(request, response);
+		}
+		else if(acao.equalsIgnoreCase("nficcao")) {
+			
+			red = request.getRequestDispatcher("/Principal/pages/pageNficcao.jsp");
+			red.forward(request, response);
+			
+		}else if (acao.equalsIgnoreCase("Poesia")) {
+			red = request.getRequestDispatcher("/Principal/pages/pagePoesia.jsp");
+			red.forward(request, response);
+			
+		}else {
+			
+			red = request.getRequestDispatcher("index.jsp");
+            red.forward(request, response);
 		}
 	}
 
