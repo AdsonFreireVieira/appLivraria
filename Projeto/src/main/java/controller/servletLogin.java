@@ -27,7 +27,7 @@ public class servletLogin extends HttpServlet {
 		
 		String acao = request.getParameter("acao");
 
-		if(acao.equalsIgnoreCase("cadastrar")) {
+		if (!acao.isEmpty()&& acao.equalsIgnoreCase("cadastrar")) {
 			 
 			RequestDispatcher redirecionar = request.getRequestDispatcher("/Principal/CadastroLogin.jsp");
 			redirecionar.forward(request, response);

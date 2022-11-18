@@ -54,7 +54,7 @@
 	
 	
 	<div class="image" data-title="Cadastro">
-		<a href=""><img alt="" src="src/image/incluir.png"></a>	
+		<a href="servletCadastro?acao=novo"><img alt="" src="src/image/incluir.png"></a>	
 		<h3>Cadastrar Novo</h3>
 			
 		</div>		
