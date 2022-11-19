@@ -39,4 +39,14 @@
     <servlet-name>servletCadastro</servlet-name>
     <url-pattern>/servletCadastro</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>servletLivros</display-name>
+    <servlet-name>servletLivros</servlet-name>
+    <servlet-class>controller.servletLivros</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servletLivros</servlet-name>
+    <url-pattern>/servletLivros</url-pattern>
+  </servlet-mapping>
 </web-app>

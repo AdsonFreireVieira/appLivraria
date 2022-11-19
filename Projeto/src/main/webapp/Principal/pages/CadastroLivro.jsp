@@ -15,8 +15,9 @@
 <title>Cadastro Livro</title>
 </head>
 <body>
-
-	<form action="cadastro" method="post">
+<h2>JSP LIVROS</h2>
+   
+	<form action="servletLivro" method="post">
 		<div class="form-group row">
 			<label for="inputPassword" class="col-sm-1 col-form-label">Nome
 				Livro</label>
@@ -39,8 +40,9 @@
 				<input type="text" name="preco" class="form-control"
 					required="required" placeholder="">
 			</div>
-		</div>			
-	
+		</div>
+
+
 		<div class="form-group row">
 			<label for="inputPassword" class="col-sm-1 col-form-label">status</label>
 			<div class="col-sm-7">
@@ -48,19 +50,22 @@
 					id="inputPassword" required="required" placeholder="">
 			</div>
 		</div>
-  <select class="form-select" aria-label="Default select example">
-				
-					<option selected>Genero Livro</option>
-					<option value="acao">Acao</option>
-					<option value="biografia">Biografia</option>
-					<option value="cientifico">Cientifico</option>
-					<option value="cronicas">Cronicas</option>
-					<option value="fabulas">Fabulas</option>
-					<option value="gastronomia">Gastronomia</option>
-					<option value="nficcao">Não Ficcao</option>
-					<option value="poesia">Poesia</option>
-				</select>
-   
+
+		<div class="form-group row">
+		<label for="inputPassword" class="col-sm-1 col-form-label">Genero Livro</label>
+			<select class="col-sm-7" name="select" aria-label="Default select example">
+
+				<option selected></option>
+				<option value="acao">Acao</option>
+				<option value="biografia">Biografia</option>
+				<option value="cientifico">Cientifico</option>
+				<option value="cronicas">Cronicas</option>
+				<option value="fabulas">Fabulas</option>
+				<option value="gastronomia">Gastronomia</option>
+				<option value="nficcao">Não Ficcao</option>
+				<option value="poesia">Poesia</option>
+			</select>
+		</div>
 	</form>
 
 

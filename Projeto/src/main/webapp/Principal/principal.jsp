@@ -14,7 +14,7 @@
    <h3 id="titulo">JSP LIVROS </h3>
 <body>
           
-          
+          <form action="servletLivros" method="post">          
 	<div class="gallery_container">
 		<div class="image" data-title="Livro">
 		<a href="servletCadastro?acao=paginAcao"><img alt="" src="src/image/download.jpg"> </a>
@@ -60,6 +60,7 @@
 		</div>		
 	</div>
  
+</form>
 
 
 </body>
