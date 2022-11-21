@@ -49,4 +49,14 @@
     <servlet-name>servletLivros</servlet-name>
     <url-pattern>/servletLivros</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>servletLivro</display-name>
+    <servlet-name>servletLivro</servlet-name>
+    <servlet-class>controller.servletLivro</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>servletLivro</servlet-name>
+    <url-pattern>/servletLivro</url-pattern>
+  </servlet-mapping>
 </web-app>

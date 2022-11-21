@@ -7,9 +7,7 @@ public class Cliente {
 	private String  nome_cliente;
 	private String  cpf_cliente; 
 	private String  email_cliente;
-	private String  logradouro;
 	private String  cep;
-    private String  numero;
     private String  cidade;
     private String  login;
     private String  senha;
@@ -51,23 +49,12 @@ public class Cliente {
 	public void setEmail_cliente(String email_cliente) {
 		this.email_cliente = email_cliente;
 	}
-	public String getLogradouro() {
-		return logradouro;
-	}
-	public void setLogradouro(String logradouro) {
-		this.logradouro = logradouro;
-	}
+	
 	public String getCep() {
 		return cep;
 	}
 	public void setCep(String cep) {
 		this.cep = cep;
-	}
-	public String getNumero() {
-		return numero;
-	}
-	public void setNumero(String numero) {
-		this.numero = numero;
 	}
 	public String getCidade() {
 		return cidade;

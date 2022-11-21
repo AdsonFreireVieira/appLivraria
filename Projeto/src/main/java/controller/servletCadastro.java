@@ -97,9 +97,9 @@ public class servletCadastro extends HttpServlet {
 		String nome= request.getParameter("nome");
 		String cpf = request.getParameter("cpf");
 		String email = request.getParameter("email");
-		String logradouro = request.getParameter("logradouro");
+		
 		String cep = request.getParameter("cep");
-		String numero = request.getParameter("numero");
+		
 		String cidade = request.getParameter("cidade");
 		String login = request.getParameter("login");
 		String senha = request.getParameter("senha");
@@ -109,9 +109,7 @@ public class servletCadastro extends HttpServlet {
 		cliente.setNome_cliente(nome);
 		cliente.setCpf_cliente(cpf);
 		cliente.setEmail_cliente(email);
-		cliente.setLogradouro(logradouro);
 		cliente.setCep(cep);
-		cliente.setNumero(numero);
 		cliente.setCidade(cidade);
 		cliente.setLogin(login);
 		cliente.setSenha(senha); 

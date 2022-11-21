@@ -5,7 +5,6 @@ import java.util.Date;
 public class Pedido {
 
 	private Integer numero_pedido;
-	private Date data_pedido;
 	private double valor_bruto;
 	private double desconto;
 	private double valor_total;
@@ -16,12 +15,7 @@ public class Pedido {
 	public void setNumero_pedido(Integer numero_pedido) {
 		this.numero_pedido = numero_pedido;
 	}
-	public Date getData_pedido() {
-		return data_pedido;
-	}
-	public void setData_pedido(Date data_pedido) {
-		this.data_pedido = data_pedido;
-	}
+	
 	public double getValor_bruto() {
 		return valor_bruto;
 	}

@@ -15,9 +15,16 @@
 <title>Cadastro Livro</title>
 </head>
 <body>
-<h2>JSP LIVROS</h2>
-   
-	<form action="servletLivro" method="post">
+	<h2>JSP LIVROS</h2>
+
+	<form  class="form-material" enctype="multipart/form-data" action="servletLivro" method="post">
+
+		<div class="form-group  form-default  input-group mb-4">
+			<div class="input-group-prepend ">
+				<img alt="Imagem User" id="fotoembase64" src="" width="70px;">
+			</div>
+			<input type="file"  id="filefoto" name="filefoto"  accept="image/*"  onchange="visualizarImg('fotoembase64', 'filefoto');" class="form-control-file">
+		</div>
 		<div class="form-group row">
 			<label for="inputPassword" class="col-sm-1 col-form-label">Nome
 				Livro</label>
@@ -42,18 +49,10 @@
 			</div>
 		</div>
 
-
 		<div class="form-group row">
-			<label for="inputPassword" class="col-sm-1 col-form-label">status</label>
-			<div class="col-sm-7">
-				<input type="text" name="status" class="form-control"
-					id="inputPassword" required="required" placeholder="">
-			</div>
-		</div>
-
-		<div class="form-group row">
-		<label for="inputPassword" class="col-sm-1 col-form-label">Genero Livro</label>
-			<select class="col-sm-7" name="select" aria-label="Default select example">
+			<label for="inputPassword" class="col-sm-1 col-form-label">Genero
+				Livro</label> <select class="col-sm-7" name="genero"
+				aria-label="Default select example">
 
 				<option selected></option>
 				<option value="acao">Acao</option>
@@ -66,8 +65,44 @@
 				<option value="poesia">Poesia</option>
 			</select>
 		</div>
+
+		<input type="submit" class="btn btn-primary" value="Cadastrar">
 	</form>
 
 
+
+
+
+
+
+<script type="text/javascript">
+
+function visualizarImg(fotoembase64, filefoto) {
+	
+	var preview = document.getElementById(fotoembase64);
+	var fileuser= document.getElementById(filefoto).files[0];
+	var reader = new FileReader();
+	
+	reader.onloadend = function(){
+		
+		preview.src = reader.result;
+	
+	};
+	
+	if(fileuser){
+		reader.readAsDataURL(fileuser);
+	}else{
+		preview.src = '';
+	}
+	
+}
+
+
+
+
+
+</script>
+
 </body>
 </html>
+

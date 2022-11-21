@@ -8,7 +8,8 @@ public class Livro {
 	private double preco;
 	private String genero;
 	private String status;
-    private String foto_livro;
+    private String fotouser;
+    private String extensaofoto;
    
     
     
@@ -42,20 +43,17 @@ public class Livro {
 	public void setGenero(String genero) {
 		this.genero = genero;
 	}
-	public String getStatus() {
-		return status;
+	public String getFotouser() {
+		return fotouser;
 	}
-	public void setStatus(String status) {
-		this.status = status;
+	public void setFotouser(String fotouser) {
+		this.fotouser = fotouser;
 	}
-	public String getFoto_livro() {
-		return foto_livro;
+	public String getExtensaofoto() {
+		return extensaofoto;
 	}
-	public void setFoto_livro(String foto_livro) {
-		this.foto_livro = foto_livro;
+	public void setExtensaofoto(String extensaofoto) {
+		this.extensaofoto = extensaofoto;
 	}
-    
-    
 	
-
 }

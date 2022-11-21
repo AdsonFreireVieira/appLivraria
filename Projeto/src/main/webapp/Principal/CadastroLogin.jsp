@@ -36,21 +36,9 @@
    </div>
   </div>
   <div class="form-group row">
-    <label for="" class="col-sm-1 col-form-label">Logradouro</label>
-    <div class="col-sm-7">
-      <input type="text" name="logradouro"class="form-control" id="inputPassword" required="required"" placeholder="logradouro">
-    </div>
-  </div>
-  <div class="form-group row">
     <label for="inputPassword" class="col-sm-1 col-form-label">Cep</label>
     <div class="col-sm-7">
       <input type="text" name="cep" class="form-control" id="inputPassword" required="required" placeholder="Cep">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="inputPassword" class="col-sm-1 col-form-label">Numero</label>
-    <div class="col-sm-7">
-      <input type="text" name="numero" class="form-control" id="inputPassword" required="required" placeholder="Numero">
     </div>
   </div>
   <div class="form-group row">
