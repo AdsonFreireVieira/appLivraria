@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 
 import org.apache.tomcat.jakartaee.commons.compress.utils.IOUtils;
 import org.apache.tomcat.util.codec.binary.Base64;
@@ -10,6 +11,7 @@ import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import dao.DAOLivrorRepository;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -23,7 +25,7 @@ public class servletLivro extends HttpServlet {
     
     public servletLivro() {
         super();
-        // TODO Auto-generated constructor stub
+        
     }
 
 	
@@ -33,6 +35,8 @@ public class servletLivro extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		DAOLivrorRepository daolivro = new DAOLivrorRepository();
 		
 		String nome = request.getParameter("nomeLivro");
 	    String editora = request.getParameter("editora");
@@ -65,6 +69,22 @@ public class servletLivro extends HttpServlet {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+	
+	
+	if(genero != null && !genero.isEmpty()) {
+		try {
+			daolivro.consultalivroGenero(genero);
+			 List<Livro> dados =  daolivro.consultalivroGenero(genero);
+	  for (Livro livro2 : dados) {
+		  System.out.println(livro2.getPreco());
+	}		 
+     
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
+}
 }
